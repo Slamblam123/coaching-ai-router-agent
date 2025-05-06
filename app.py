@@ -59,10 +59,9 @@ if st.button("Generate Output"):
         # Initialize LLM
         llm = ChatOpenAI(
     temperature=0.7,
-    model_name="gpt-3.5-turbo",
-    request_timeout=90,
+    model_name="gpt-4",  # or "gpt-4-turbo" if preferred
+    request_timeout=120,  # increase timeout due to GPT-4's longer response time
     max_retries=5,
-    streaming=True,  # optional but reduces timeout risk
     openai_api_key=os.getenv("OPENAI_API_KEY")
 )
 

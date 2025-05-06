@@ -62,6 +62,7 @@ if st.button("Generate Output"):
     model_name="gpt-3.5-turbo",
     request_timeout=90,
     max_retries=5,
+    streaming=True,  # optional but reduces timeout risk
     openai_api_key=os.getenv("OPENAI_API_KEY")
 )
 

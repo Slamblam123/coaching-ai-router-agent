@@ -43,7 +43,7 @@ Task: {user_input}"""
         return "Unrecognized task type."
 
 # Run Agent
-llm = ChatOpenAI(temperature=0.7, model_name="gpt-4")
+llm = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo")
 
 if st.button("Generate Output"):
     if user_input:

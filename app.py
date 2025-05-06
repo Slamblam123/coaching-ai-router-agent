@@ -58,13 +58,12 @@ if st.button("Generate Output"):
 
         # Initialize LLM
         llm = ChatOpenAI(
-            temperature=0.7,
-            model_name="gpt-3.5-turbo",
-            request_timeout=90,
-            max_retries=5,
-            openai_api_key=os.getenv("OPENAI_API_KEY"),
-            streaming=False
-        )
+    temperature=0.7,
+    model_name="gpt-3.5-turbo",
+    request_timeout=90,
+    max_retries=5,
+    openai_api_key=os.getenv("OPENAI_API_KEY")
+)
 
         # Call the model
         response = llm.invoke(messages)
